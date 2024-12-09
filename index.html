@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Bookshelf App</h1>
+    </header>
+    <main>
+        <section id="form-section">
+            <h2>Add New Book</h2>
+            <form id="book-form" data-testid="bookForm">
+                <input type="text" id="title" placeholder="Book Title" required data-testid="bookFormTitleInput">
+                <input type="text" id="author" placeholder="Author" required data-testid="bookFormAuthorInput">
+                <input type="number" id="year" placeholder="Year" required data-testid="bookFormYearInput">
+                <label>
+                    <input type="checkbox" id="isCompleted" data-testid="bookFormIsCompleteCheckbox"> Finished Reading
+                </label>
+                <button type="submit" data-testid="bookFormSubmitButton">Add Book</button>
+            </form>
+        </section>
+        
+        <section id="search-section">
+            <h2>Search Books</h2>
+            <form id="search-book-form" data-testid="searchBookForm">
+                <input type="text" id="search-title" placeholder="Search by Title" data-testid="searchBookFormTitleInput">
+                <button type="submit" data-testid="searchBookFormSubmitButton">Search</button>
+            </form>
+        </section>
+
+        <section id="book-lists">
+            <div id="uncompleted-books" data-testid="incompleteBookList">
+                <h2>Books to Read</h2>
+                <div class="book-container"></div>
+            </div>
+            <div id="completed-books" data-testid="completeBookList">
+                <h2>Finished Books</h2>
+                <div class="book-container"></div>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
